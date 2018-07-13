@@ -38,7 +38,7 @@ function inputFocus(){
 }
 
 function errorHandler(num){
-  if (Number.isInteger(num) || num < 0){
+  if (!Number.isInteger(num) || num < 0){
       clearForm();
       alert("I like numbers. Please insert a valid number :)");
       inputFocus();
