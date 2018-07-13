@@ -8,41 +8,41 @@ $(document).ready(function(){
     errorHandler(userNumber); //Handles invalid input
 
     //Loop through the numbers & calls the functions
-    for (var x=1;x<=userNumber;x++){
-      if(checkBoth(x)){
+    for (var loopVar=1;loopVar<=userNumber;loopVar++){
+      if(checkBoth(loopVar)){
         $("ul#gameOutput").append("<li>"+"Ping Pong!"+"</li>");
       }
-      else if(checkThree(x)){
+      else if(checkThree(loopVar)){
         $("ul#gameOutput").append("<li>Ping!</li>");
       }
-      else if(checkFive(x)){
+      else if(checkFive(loopVar)){
         $("ul#gameOutput").append("<li>Pong!</li>");
       }
       else {
-        $("ul#gameOutput").append("<li>"+x+"</li>");
+        $("ul#gameOutput").append("<li>"+loopVar+"</li>");
       }
      }
      clearForm();
+     inputFocus();
   });
-
 });
 
 function clearForm(){
   document.getElementById("pingPongForm").reset();
 }
 
+function inputFocus(){
+  document.getElementById("userInput").focus();
+}
+
 function errorHandler(num){
-  if (num !== parseInt(num)){
-    clearForm();
-    alert("Please insert a valid number :)")
-    document.getElementById("userInput").focus();
-    return false;
-  }
-  else if (num !== parseFloat(num)){
-    alert("I can't handle floats yet :)")
-    clearForm();
-    return false;
-  }
+  if (Number.isInteger(num) || num < 0){
+      clearForm();
+      alert("I like numbers. Please insert a valid number :)");
+      inputFocus();
+      return false;
+    }
+
 }
 
 function checkThree(num){
@@ -58,7 +58,7 @@ function checkFive(num){
 }
 
 function checkBoth(num){
-  if(checkThree(num)&&checkFive(num)){
+  if(checkThree(num) && checkFive(num)){
 		return true;
     }
 }
