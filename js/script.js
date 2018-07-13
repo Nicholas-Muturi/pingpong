@@ -2,14 +2,12 @@ $(document).ready(function(){
 
   $("form#pingPongForm").submit(function(event){
     event.preventDefault();
-    //Capture user input and convert it to Int type from String
     var userNumber = parseInt($("input#userInput").val());
-    $("ul#gameOutput").empty();
 
-    //Error handling code
-    errorHandler(userNumber);
+    $("ul#gameOutput").empty(); //Clears previous List
+    errorHandler(userNumber); //Handles invalid input
 
-    //Loop through the numbers
+    //Loop through the numbers & calls the functions
     for (var x=1;x<=userNumber;x++){
       if(checkBoth(x)){
         $("ul#gameOutput").append("<li>"+"Ping Pong!"+"</li>");
@@ -35,7 +33,13 @@ function clearForm(){
 
 function errorHandler(num){
   if (num !== parseInt(num)){
-    alert("User hasn't inserted a valid number")
+    clearForm();
+    alert("Please insert a valid number :)")
+    document.getElementById("userInput").focus();
+    return false;
+  }
+  else if (num !== parseFloat(num)){
+    alert("I can't handle floats yet :)")
     clearForm();
     return false;
   }
