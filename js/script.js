@@ -3,8 +3,7 @@ $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
     var userNumber = parseInt($("input#userInput").val());
-    //Clear previous list code here
-    console.log(userNumber);
+    $("ul#gameOutput").empty();
     //Capture user input and convert it to Int type from String
 
     //Error handling code
