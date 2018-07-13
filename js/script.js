@@ -27,6 +27,8 @@ $(document).ready(function(){
   });
 });
 
+
+//Back-End
 function clearForm(){
   document.getElementById("pingPongForm").reset();
 }
@@ -42,7 +44,6 @@ function errorHandler(num){
       inputFocus();
       return false;
     }
-
 }
 
 function checkThree(num){
