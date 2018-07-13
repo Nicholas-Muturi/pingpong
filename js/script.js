@@ -24,15 +24,19 @@ $(document).ready(function(){
         $("ul#gameOutput").append("<li>"+x+"</li>");
       }
      }
-
+     clearForm();
   });
 
 });
 
+function clearForm(){
+  document.getElementById("pingPongForm").reset();
+}
+
 function errorHandler(num){
   if (num !== parseInt(num)){
     alert("User hasn't inserted a valid number")
-    document.getElementById("pingPongForm").reset();
+    clearForm();
     return false;
   }
 }
