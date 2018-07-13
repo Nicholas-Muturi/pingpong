@@ -1,20 +1,31 @@
 $(document).ready(function(){
-	var userInput = parseInt(prompt("Insert a number"));
 
-  for(var x=1;x<=userInput;x++){
-  	if(checkBoth(x)){
-    	console.log("ping pong");
-    }
-    else if(checkFive(x)){
-    	console.log("pong");
-    }
-    else if(checkThree(x)){
-    	console.log("ping");
-    }
-    else {
-    	console.log(x);
-    }
-   }
+  $("form").submit(function(event){
+    event.preventDefault();
+    var userNumber = parseInt($("input#userInput").val());
+    //Clear previous list code here
+    console.log(userNumber);
+    //Capture user input and convert it to Int type from String
+
+    //Error handling code
+
+    //Loop through the numbers
+    for (var x=1;x<=userNumber;x++){
+      if(checkBoth(x)){
+        $("ul#gameOutput").append("<li>"+"Ping Pong!"+"</li>");
+      }
+      else if(checkThree(x)){
+        $("ul#gameOutput").append("<li>Ping!</li>");
+      }
+      else if(checkFive(x)){
+        $("ul#gameOutput").append("<li>Pong!</li>");
+      }
+      else {
+        $("ul#gameOutput").append("<li>"+x+"</li>");
+      }
+     }
+
+  });
 
 });
 
