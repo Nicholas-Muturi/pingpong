@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
-  $("form").submit(function(event){
+  $("form#pingPongForm").submit(function(event){
     event.preventDefault();
+    //Capture user input and convert it to Int type from String
     var userNumber = parseInt($("input#userInput").val());
     $("ul#gameOutput").empty();
-    //Capture user input and convert it to Int type from String
 
     //Error handling code
+    errorHandler(userNumber);
 
     //Loop through the numbers
     for (var x=1;x<=userNumber;x++){
@@ -28,6 +29,13 @@ $(document).ready(function(){
 
 });
 
+function errorHandler(num){
+  if (num !== parseInt(num)){
+    alert("User hasn't inserted a valid number")
+    document.getElementById("pingPongForm").reset();
+    return false;
+  }
+}
 
 function checkThree(num){
   if(num%3===0){
