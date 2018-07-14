@@ -2,17 +2,35 @@
 #### By **Nicholas Muturi**
 
 ## Description
+This is a website that allows users to play a small logical game called Ping Pong. The website takes a number from the user via a form and prints the list of the number inserted. However, if the number is divisible by 3 - it returns a string "ping". If the number is divisible by 5, it returns a string "pong" and if the number is divisible by both 3 and 5, it returns "ping pong".
 
+**EXAMPLE**
+| Number Inserted | Expected Output
+| 3 | 1, 2, ping
+| 5 | 1, 2, ping, 4,  pong
+| 15 | .... 11, ping, 13, 14, ping pong
 
+In the event a user inserts a string or blank result, the form shall not generate a list and instead insist on valid input
 
-## Setup/Installation requirements
+## Setup Requirements
+* Updated Browser
+* Git
+* Animate.css
+To clone my repository, copy the code below and run it in your terminal
+'git clone https://github.com/Nicholas-Muturi/animate.css.git'
+Use your preferred text editor to modify the project to your liking
 
+For animate.css, view the live site by [clicking here](https://daneden.github.io/animate.css/). A download link is provided and an alternative github link if you want more information about the tool.
 
 ## Technologies used
-
+* Html
+* Css
+* Bootstrap
+* Jquery
+* Javascript
 
 ## Live demo
-To view the live demo, click [Here](https://nicholas-muturi.github.io/pingpong/)
+To view the live demo, [click Here](https://nicholas-muturi.github.io/pingpong/)
 
 
 ## Contact Details
