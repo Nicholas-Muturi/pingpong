@@ -2,14 +2,23 @@ $(document).ready(function(){
 
   $("form#pingPongForm").submit(function(event){
     event.preventDefault();
-
+    $("ul#gameOutput").empty(); //Clears previous List
     var userNumber = parseInt($("input#userInput").val());
 
-    $("ul#gameOutput").empty(); //Clears previous List
-    $("#userInput").removeClass("error"); //Removes error class if previous input had an error
+    // Remove previous classes and restore default classes
+    $("#userInput").addClass("inputTag");
+    $("#userInput").removeClass("error");
+    $("#userInput").removeClass("animated pulse");
     if(!Number.isInteger(userNumber)||userNumber<0||userNumber===""){    //Error Handler
+      $("#userInput").removeClass("inputTag");
       $("#userInput").addClass("error");
+      clearForm();
+      inputFocus();
       return false;
+    }
+    else {
+      $("#userInput").toggleClass("animated pulse");
+      clearForm();
     }
 
     //Loop through the numbers & calls the functions
@@ -27,8 +36,7 @@ $(document).ready(function(){
         $("ul#gameOutput").append("<li>"+loopVar+"</li>");
       }
      }
-     clearForm();
-     inputFocus();
+
   });
 });
 
