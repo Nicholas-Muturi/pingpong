@@ -6,6 +6,7 @@ This is a website that allows users to play a small logical game called Ping Pon
 
 **EXAMPLE**
 | Number Inserted | Expected Output
+| --- | ---
 | 3 | 1, 2, ping
 | 5 | 1, 2, ping, 4,  pong
 | 15 | .... 11, ping, 13, 14, ping pong
@@ -17,7 +18,7 @@ In the event a user inserts a string or blank result, the form shall not generat
 * Git
 * Animate.css
 To clone my repository, copy the code below and run it in your terminal
-'git clone https://github.com/Nicholas-Muturi/animate.css.git'
+`git clone https://github.com/Nicholas-Muturi/animate.css.git`
 Use your preferred text editor to modify the project to your liking
 
 For animate.css, view the live site by [clicking here](https://daneden.github.io/animate.css/). A download link is provided and an alternative github link if you want more information about the tool.
