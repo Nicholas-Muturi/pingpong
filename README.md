@@ -4,7 +4,12 @@
 ## Description
 This is a website that allows users to play a small logical game called Ping Pong. The website takes a number from the user via a form and prints the list of the number inserted. However, if the number is divisible by 3 - it returns a string "ping". If the number is divisible by 5, it returns a string "pong" and if the number is divisible by both 3 and 5, it returns "ping pong".
 
-**EXAMPLE**
+| Number Inserted |  Expected Output                 |
+| --------------- |---------------------------------:|
+| 3               | 1, 2, ping                       |
+| 5               |  1, 2, ping, 4, pong             |
+| 15              | .... 11, ping, 13, 14, ping pong |
+
  Number Inserted | Expected Output
  --- | ---
  3 | 1, 2, ping
