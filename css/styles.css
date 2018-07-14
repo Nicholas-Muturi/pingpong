@@ -5,6 +5,7 @@
     background: #0A0003;
   }
 
+/*.......Custom Jumbotron........*/
 .jumbo {
   position: relative;
   text-align: center;
@@ -19,6 +20,7 @@
   padding: 0;
   margin: 0;
 }
+
 .jumbo .custom-centered {
   position: absolute;
   top: 35%;
@@ -27,22 +29,28 @@
   font-family: 'Titillium Web', sans-serif;
   font-size: 170px;
   font-style: italic;
-  background-image: -webkit-linear-gradient( #11054f 0%, #11054f 18%, #00eeff 46%, #87f5fc 50%, #c1f4f7 54%, #250a1b 58%, #DB50DC 90%, #fff4fd 100%);
+  background-image: -webkit-linear-gradient( #11054f 0%, #11054f 18%, #00eeff 46%, #87f5fc 50%, #c1f4f7 52%, #39102a 55%, #DB50DC 90%, #fff4fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 4px #f2fbfb;
   -webkit-padding-start: 0px;
   -webkit-padding-end: 18px;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -moz-text-stroke: 4px #f2fbfb;
+  -moz-padding-start: 0px;
+  -moz-padding-end: 18px;
 }
 
+/* ...........Main Body w/ Content ...........*/
 .body-content {
   padding: 3px 0 20px 0;
   margin: 0;
-  background: #0A0003;
+  background: #011627;
   font-size: 20px;
   text-align: center;
   font-family: "Quattrocento";
-  color: #FFFFFF;
+  color: #FDFFFC;
 }
 .body-content h2{
   padding: 20px 0 5px 0;
@@ -69,16 +77,24 @@
 }
 #pingPongForm .btn{
   font-size: 18px;
+  padding: 10px;
   font-family: "Press Start 2P";
-  background: #240115;
+  background: #1d0026;
   color: white;
-  border: 1px solid #B4E1FF;
+  border: 1px solid #2EC4B6;
 }
-#userInput {
+#pingPongForm .btn:focus{
+  box-shadow: 0 0 10px #2EC4B6;
+}
+.inputTag {
   margin: 0 auto;
   text-align: center;
+  border: 0px;
 }
-
+.inputTag:focus{
+  box-shadow: 0 0 0px;
+  border: 0px;
+}
 .three{
   color: #FF206E;
 }
@@ -87,4 +103,26 @@
 }
 .both {
   color: rgb(255, 92, 0);
+}
+
+
+/*..........Error Animation Class.........*/
+.error {
+  border: 3px solid red;
+  animation: shake 0.2s;
+}
+@keyframes shake {
+  0%,100% {
+    left: 0px;
+  }
+  20%,80% {
+    left: -10px;
+  }
+  40%,60% {
+    left: 10px;
+  }
+}
+
+.error:focus{
+  border: 3px solid red;
 }
