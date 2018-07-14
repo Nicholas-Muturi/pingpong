@@ -12,29 +12,28 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="jumbotron">
-      <h1> Ping Pong </h1>
+  <div class="container-fill">
+    <div class="jumbo">
+      <img src="images/retrowave.jpg" alt="">
+      <h1 class="custom-centered">Ping Pong</h1>
     </div>
 
     <div class="body-content">
       <h2>Let&#x27;s Play</h2>
-      <h3>Rules:</h3>
-
-      <p>Ping Pong wil count up your number from 1 with the following exceptions</p>
+      <h3>Rules</h3>
+      <p>Ping Pong will count up your number from 1 with the following exceptions</p>
       <ol>
-        <li>Numbers divisible by 3 become "ping"</li>
-        <li>Numbers divisible by 5 will become "pong"</li>
-        <li>Numbers divisble by both 3 and 5 become "ping pong"</li>
+        <li>Numbers divisible by <span class="three">3</span> become "<span class="three">ping</span>"</li>
+        <li>Numbers divisible by <span class="five">5</span> will become "<span class="five">pong</span>"</li>
+        <li>Numbers divisble by both <span class="three">3</span> and <span class="five">5</span> become "<span class="both">ping pong</span>"</li>
       </ol>
-      <form id="pingPongForm">
-        <div class="form-group">
-          <label for="userInput">Enter your number:</label>
-          <input id="userInput" type="text" class="form-control col-md-6">
-        </div>
-        <button type="submit" class="btn btn-primary">Let's Play!</button>
-      </form>
-      <ul id="gameOutput"></ul>
+        <form id="pingPongForm">
+          <div class="form-group">
+            <input id="userInput" type="text" class="form-control col-md-4" placeholder="Enter your number here">
+          </div>
+          <button type="submit" class="btn btn-primary col-md-1">START</button>
+        </form>
+        <ul id="gameOutput"></ul>
     </div>
   </div>
 </body>
