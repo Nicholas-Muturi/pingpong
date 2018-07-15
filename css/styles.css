@@ -27,7 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Titillium Web', sans-serif;
-  font-size: 170px;
+  font-size: 160px;
   font-style: italic;
   background-image: -webkit-linear-gradient( #11054f 0%, #11054f 18%, #00eeff 46%, #87f5fc 50%, #9df7fc 52%, #AF1C7C 60%, #DB50DC 90%, #fff4fd 100%);
   -webkit-background-clip: text;
@@ -41,6 +41,7 @@
   -moz-padding-start: 0px;
   -moz-padding-end: 18px;
 }
+
 
 /* ...........Main Body w/ Content ...........*/
 .body-content {
@@ -131,5 +132,5 @@
 
 .error:focus{
   border: 3px solid red;
-  box-shadow: 2px 2px 20px #AF1C7C;
+  box-shadow: 2px 2px 20px #FF0000;
 }

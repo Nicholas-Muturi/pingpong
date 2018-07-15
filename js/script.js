@@ -17,7 +17,7 @@ $(document).ready(function(){
       return false;
     }
     else {
-      $("#userInput").toggleClass("animated pulse");
+      $("#userInput").addClass("animated pulse");
       clearForm();
     }
 
